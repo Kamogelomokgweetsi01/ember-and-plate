@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ember & Plate | Menu</title>
+
+    <link rel="stylesheet" href="../css/menu.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="menu-header">
+      <div class="menu-header-content">
+        <a href="customer-dashboard.html" class="brand">
+          <span class="brand-kicker"> EMBER & PLATE </span>
+
+          <span class="brand-name"> MENU </span>
+        </a>
+
+        <a href="cart.html" class="header-cart">
+          <span class="cart-icon"> ▢ </span>
+
+          <span> CART </span>
+
+          <span class="cart-count" id="cartCount"> 0 </span>
+        </a>
+      </div>
+    </header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="menu-page">
+      <!-- INTRO -->
+
+      <section class="menu-intro">
+        <span class="section-kicker"> FROM OUR KITCHEN </span>
+
+        <h1>The Ember & Plate Menu</h1>
+
+        <p>
+          Woodfire cooking, seasonal ingredients and dishes made to be shared
+          around the table.
+        </p>
+      </section>
+
+      <!-- =========================
+             SEARCH
+        ========================== -->
+
+      <section class="menu-controls">
+        <div class="search-wrapper">
+          <span class="search-icon"> ⌕ </span>
+
+          <input
+            type="search"
+            id="menuSearch"
+            placeholder="Search dishes, ingredients, cellar....."
+            aria-label="Search menu"
+          />
+        </div>
+
+        <div class="category-list">
+          <button class="category-button active" data-category="all">
+            ALL
+          </button>
+
+          <button class="category-button" data-category="starters">
+            STARTERS
+          </button>
+
+          <button class="category-button" data-category="mains">MAINS</button>
+
+          <button class="category-button" data-category="woodfire">
+            WOODFIRE
+          </button>
+
+          <button class="category-button" data-category="sides">SIDES</button>
+
+          <button class="category-button" data-category="desserts">
+            DESSERTS
+          </button>
+
+          <button class="category-button" data-category="drinks">DRINKS</button>
+        </div>
+      </section>
+
+      <!-- =========================
+             FEATURED
+        ========================== -->
+
+      <section class="menu-featured">
+        <div class="menu-section-heading">
+          <div>
+            <span class="section-kicker"> CHEF'S RECOMMENDATION </span>
+
+            <h2>Tonight's Fire</h2>
+          </div>
+        </div>
+
+        <article class="featured-menu-dish" id="featuredMenuDish">
+          <p>Loading chef's recommendation...</p>
+        </article>
+      </section>
+
+      <!-- =========================
+             MENU
+        ========================== -->
+
+      <section class="menu-list-section">
+        <div class="menu-section-heading">
+          <div>
+            <span class="section-kicker"> POURED & PLATED </span>
+
+            <h2>Our Menu</h2>
+          </div>
+
+          <span class="result-count" id="resultCount"> 8 dishes </span>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <p>Loading our menu...</p>
+        </div>
+
+        <!-- EMPTY SEARCH -->
+
+        <div class="empty-menu" id="emptyMenu">
+          <h3>Nothing found.</h3>
+
+          <p>Try another dish or category.</p>
+        </div>
+      </section>
+
+      <!-- =========================
+             FOOTER MESSAGE
+        ========================== -->
+
+      <section class="menu-message">
+        <h2>Good food. Good moments.</h2>
+
+        <p>
+          Everything leaves our kitchen through the fire, made fresh for your
+          table.
+        </p>
+      </section>
+    </main>
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+    ========================== -->
+
+    <nav class="bottom-navigation" aria-label="Main navigation">
+      <a href="customer-dashboard.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>HOME</span>
+      </a>
+
+      <a href="menu.html" class="nav-item active" aria-current="page">
+        <span class="nav-icon" aria-hidden="true">♜</span>
+        <span>MENU</span>
+      </a>
+
+      <a href="cart.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">▢</span>
+        <span class="nav-label">
+          CART
+          <span class="cart-count" id="bottomCartCount">0</span>
+        </span>
+      </a>
+
+      <a href="orders.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">◉</span>
+        <span>ORDERS</span>
+      </a>
+    </nav>
+
+    <script type="module" src="../js/menu.js"></script>
+  </body>
+</html>

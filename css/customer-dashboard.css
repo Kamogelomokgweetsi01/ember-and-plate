@@ -1,0 +1,814 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f3eb;
+    color: #171717;
+
+    font-family: "DM Sans", sans-serif;
+
+    line-height: 1.5;
+
+    padding-bottom: 90px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #ded8cc;
+}
+
+.header-content {
+    width: min(100% - 2rem, 1400px);
+
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-kicker {
+    color: #c65d3a;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.15rem;
+}
+
+
+/* PROFILE */
+
+.profile-button {
+    border: none;
+    background: transparent;
+
+    padding: 0;
+}
+
+.profile-button img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    width: min(100% - 2rem, 1400px);
+
+    margin: auto;
+
+    padding: 1.5rem 0 3rem;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-section {
+    margin-bottom: 1rem;
+}
+
+.welcome-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 0.4rem;
+}
+
+.section-kicker {
+    color: #c65d3a;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+}
+
+.live-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    color: #777;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #c65d3a;
+
+    border-radius: 50%;
+}
+
+.welcome-section h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 0.3rem;
+}
+
+.welcome-section p {
+    color: #777;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+.order-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 0.65rem 0.9rem;
+
+    background: #e8e2d7;
+
+    border-radius: 7px;
+
+    margin-bottom: 2rem;
+}
+
+.order-label {
+    display: block;
+
+    color: #c65d3a;
+
+    font-size: 0.63rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+.order-info p {
+    color: #777;
+
+    font-size: 0.72rem;
+}
+
+.track-button {
+    border: none;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    padding: 0.45rem 0.8rem;
+
+    border-radius: 4px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+}
+
+.track-button:hover {
+    background: #c65d3a;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 0.8rem;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+}
+
+.section-heading a {
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+.section-heading a:hover {
+    color: #c65d3a;
+}
+
+
+/* =========================
+   FEATURED DISH
+========================= */
+
+.featured-section {
+    margin-bottom: 3rem;
+}
+
+.featured-dish {
+    background: #ffffff;
+
+    border: 1px solid #ded8cc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.featured-image {
+    position: relative;
+
+    width: 100%;
+
+    height: clamp(240px, 35vw, 420px);
+
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* LABEL */
+
+.dish-label {
+    position: absolute;
+
+    top: 1rem;
+    left: 1rem;
+
+    background: #ffffff;
+
+    color: #c65d3a;
+
+    padding: 0.45rem 0.65rem;
+
+    border-radius: 4px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* PRICE */
+
+.dish-price {
+    position: absolute;
+
+    right: 1rem;
+    bottom: 1rem;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    padding: 0.45rem 0.65rem;
+
+    border-radius: 3px;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+
+/* CONTENT */
+
+.featured-content {
+    padding: 1rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 1.5rem;
+}
+
+.featured-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.45rem;
+
+    font-weight: 500;
+
+    margin-bottom: 0.3rem;
+}
+
+.featured-content p {
+    max-width: 900px;
+
+    color: #777;
+
+    font-size: 0.75rem;
+}
+
+.recommendation {
+    display: block;
+
+    margin-top: 0.7rem;
+
+    color: #777;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+}
+
+.order-dish-button {
+    flex-shrink: 0;
+
+    border: none;
+
+    background: #802a0a;
+
+    color: #ffffff;
+
+    padding: 0.65rem 1rem;
+
+    border-radius: 6px;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+.order-dish-button:hover {
+    background: #171717;
+}
+
+
+/* =========================
+   FAVOURITES
+========================= */
+
+.favourites-section {
+    margin-bottom: 3rem;
+}
+
+.favourites-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.5rem;
+}
+
+
+/* =========================
+   DISH CARD
+========================= */
+
+.dish-card {
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #ded8cc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.dish-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1.45 / 1;
+
+    overflow: hidden;
+
+    background: #171717;
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* CONTENT */
+
+.dish-content {
+    padding: 1rem;
+}
+
+.dish-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 500;
+
+    margin-bottom: 0.35rem;
+}
+
+.dish-content p {
+    color: #777;
+
+    font-size: 0.72rem;
+
+    line-height: 1.55;
+
+    min-height: 45px;
+}
+
+
+/* BUTTON */
+
+.add-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    margin-top: 1rem;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    padding: 0.55rem 0.75rem;
+
+    border-radius: 5px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+}
+
+.add-button span {
+    font-size: 1rem;
+}
+
+.add-button:hover {
+    background: #c65d3a;
+}
+
+
+/* =========================
+   RESTAURANT MESSAGE
+========================= */
+
+.restaurant-message {
+    text-align: center;
+
+    background: #eee8dc;
+
+    padding: 2rem 1rem;
+
+    border-radius: 8px;
+
+    margin-bottom: 1.5rem;
+}
+
+.restaurant-message h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    margin-bottom: 0.4rem;
+}
+
+.restaurant-message p {
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #777;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   RESTAURANT INFO
+========================= */
+
+.restaurant-info {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.25rem;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 0.62rem;
+}
+
+.restaurant-info strong {
+    color: #3a0b00;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-navigation {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    z-index: 200;
+
+    width: 100%;
+
+    height: 75px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #ded8cc;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-item {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.15rem;
+
+    color: #777;
+
+    font-size: 0.55rem;
+
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 1rem;
+}
+
+.nav-item.active {
+    color: #c65d3a;
+}
+
+.nav-item:hover {
+    color: #c65d3a;
+}
+
+
+/* CART BADGE */
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+
+    top: 17px;
+
+    margin-left: 17px;
+
+    min-width: 15px;
+    height: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #c65d3a;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 0.5rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        width: min(100% - 1.5rem, 700px);
+    }
+
+    .featured-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .order-dish-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding-bottom: 75px;
+    }
+
+    .dashboard {
+        width: min(100% - 1rem, 500px);
+
+        padding-top: 1rem;
+    }
+
+    .header-content {
+        width: calc(100% - 1rem);
+    }
+
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .order-card {
+        align-items: flex-start;
+    }
+
+    .favourites-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .dish-image {
+        aspect-ratio: 1.5 / 1;
+    }
+
+    .featured-image {
+        height: 240px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .order-card {
+        flex-direction: column;
+    }
+
+    .track-button {
+        width: 100%;
+    }
+
+}

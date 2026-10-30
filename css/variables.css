@@ -1,0 +1,30 @@
+:root {
+    /* Brand */
+    --color-charcoal: #171717;
+    --color-cream: #F7F3EA;
+    --color-terracotta: #C65D3A;
+    --color-gold: #C9A227;
+    --color-white: #FFFFFF;
+
+    /* Supporting colours */
+    --color-muted: #6F6A62;
+    --color-border: #DDD8CE;
+    --color-success: #4F7A5A;
+    --color-error: #A94442;
+
+    /* Typography */
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    /* Layout */
+    --content-max-width: 1200px;
+    --border-radius: 2px;
+}

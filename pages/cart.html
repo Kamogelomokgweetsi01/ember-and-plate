@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cart | Ember & Plate</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CART CSS -->
+
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="menu-header">
+      <div class="menu-header-content">
+        <a href="customer-dashboard.html" class="brand">
+          <span class="brand-kicker"> EMBER & PLATE </span>
+
+          <span class="brand-name"> CART </span>
+        </a>
+
+        <a href="menu.html" class="header-menu-link"> ← MENU </a>
+      </div>
+    </header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="cart-page">
+      <!-- INTRO -->
+
+      <section class="cart-intro">
+        <span class="section-kicker"> YOUR SELECTION </span>
+
+        <h1>Your Cart</h1>
+
+        <p>Review the dishes you've selected for your table.</p>
+      </section>
+
+      <!-- =========================
+             CART LAYOUT
+        ========================== -->
+
+      <div class="cart-layout">
+        <!-- =====================
+                 CART ITEMS
+            ====================== -->
+
+        <section class="cart-content">
+          <div class="cart-section-heading">
+            <div>
+              <span class="cart-kicker"> CURRENT SELECTION </span>
+
+              <h2 id="cartItemCount">0 Items</h2>
+            </div>
+
+            <button type="button" id="clearCart" class="clear-cart">
+              CLEAR CART
+            </button>
+          </div>
+
+          <!-- ITEMS -->
+
+          <div id="cartItems"></div>
+
+          <!-- EMPTY CART -->
+
+          <div id="emptyCart" class="empty-cart">
+            <div class="empty-cart-icon">+</div>
+
+            <h3>Your cart is empty</h3>
+
+            <p>
+              Your table is waiting. Head back to the menu and choose something
+              from the fire.
+            </p>
+
+            <a href="menu.html"> VIEW MENU </a>
+          </div>
+        </section>
+
+        <!-- =====================
+                 SUMMARY
+            ====================== -->
+
+        <aside class="cart-summary">
+          <div class="summary-heading">
+            <div>
+              <span class="cart-kicker"> YOUR ORDER </span>
+
+              <h2>Summary</h2>
+            </div>
+          </div>
+
+          <!-- SUMMARY ITEMS -->
+
+          <div id="summaryItems" class="summary-items"></div>
+
+          <div class="summary-divider"></div>
+
+          <!-- SUBTOTAL -->
+
+          <div class="summary-row">
+            <span> Subtotal </span>
+
+            <strong id="subtotal"> R 0 </strong>
+          </div>
+
+          <!-- SERVICE -->
+
+          <div class="summary-row">
+            <span> Service fee </span>
+
+            <strong id="serviceFee"> R 0 </strong>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <!-- TOTAL -->
+
+          <div class="total-row">
+            <span> TOTAL </span>
+
+            <strong id="total"> R 0 </strong>
+          </div>
+
+          <!-- CHECKOUT -->
+
+          <button
+            type="button"
+            id="checkoutButton"
+            class="checkout-button"
+            disabled
+          >
+            <span> CONTINUE TO ORDER </span>
+
+            <span class="checkout-arrow"> → </span>
+          </button>
+
+          <p class="summary-note">
+            You can review your order before sending it to the kitchen.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+    ========================== -->
+
+    <nav class="bottom-navigation" aria-label="Main navigation">
+      <a href="customer-dashboard.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>HOME</span>
+      </a>
+
+      <a href="menu.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">♜</span>
+        <span>MENU</span>
+      </a>
+
+      <a href="cart.html" class="nav-item active" aria-current="page">
+        <span class="nav-icon" aria-hidden="true">▢</span>
+        <span class="nav-label">
+          CART
+          <span class="cart-count" id="bottomCartCount">0</span>
+        </span>
+      </a>
+
+      <a href="orders.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">◉</span>
+        <span>ORDERS</span>
+      </a>
+    </nav>
+
+    <!-- CART JAVASCRIPT -->
+
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

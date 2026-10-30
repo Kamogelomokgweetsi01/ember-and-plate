@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ember & Plate | Home</title>
+
+    <link rel="stylesheet" href="../css/customer-dashboard.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="dashboard-header">
+      <div class="header-content">
+        <a href="customer-dashboard.html" class="brand">
+          <span class="brand-kicker">EMBER & PLATE</span>
+          <span class="brand-name">HOME</span>
+        </a>
+
+        <button class="profile-button" id="profileButton">
+          <img src="../assets/user-profile.png" alt="Nandi's profile" />
+        </button>
+      </div>
+    </header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="dashboard">
+      <!-- Welcome -->
+
+      <section class="welcome-section">
+        <div class="welcome-top">
+          <span class="section-kicker"> EVENING SERVICE · 17:00–22:00 </span>
+
+          <span class="live-status">
+            <span class="live-dot"></span>
+            HEART LIVE
+          </span>
+        </div>
+
+        <h1>Good evening, Kamogelo.</h1>
+
+        <p>The braai coals are glowing with tonight's hardwood tonight.</p>
+      </section>
+
+      <!-- =========================
+             ACTIVE ORDER
+        ========================== -->
+
+      <section class="order-card">
+        <div class="order-info">
+          <span class="order-label">
+            ORDER #EP-7429 · SEATED ON OPEN COALS
+          </span>
+
+          <p>Estimated ready in 15 minutes · Table 12</p>
+        </div>
+
+        <button class="track-button" id="trackOrderButton">TRACK</button>
+      </section>
+
+      <!-- =========================
+             FEATURED DISH
+        ========================== -->
+
+      <section class="featured-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker"> CURATED TONIGHT </span>
+
+            <h2>From the Woodfire</h2>
+          </div>
+
+          <a href="menu.html"> FULL MENU → </a>
+        </div>
+
+        <div id="featuredProduct" class="featured-dish">
+          <p>Loading featured dish...</p>
+        </div>
+      </section>
+
+      <!-- =========================
+             FAVOURITES
+        ========================== -->
+
+      <section class="favourites-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker"> POURED & PLATED </span>
+
+            <h2>Chef's Woodfire Favourites</h2>
+          </div>
+
+          <a href="menu.html"> FULL MENU → </a>
+        </div>
+
+        <div class="favourites-grid" id="favouritesGrid">
+          <p>Loading our favourites...</p>
+        </div>
+      </section>
+
+      <!-- =========================
+             RESTAURANT MESSAGE
+        ========================== -->
+
+      <section class="restaurant-message">
+        <h2>“Good food. Good moments.”</h2>
+
+        <p>
+          Our kitchen celebrates live fire, generous hospitality and seasonal
+          South African produce.
+        </p>
+      </section>
+
+      <!-- =========================
+             RESTAURANT INFO
+        ========================== -->
+
+      <section class="restaurant-info">
+        <strong> 147 KLOOF STREET · GARDENS · CAPE TOWN </strong>
+
+        <span>
+          Table ordering · Cellar collection · Kitchen closes at 22:00
+        </span>
+      </section>
+    </main>
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+    ========================== -->
+
+    <nav class="bottom-navigation" aria-label="Main navigation">
+      <a
+        href="customer-dashboard.html"
+        class="nav-item active"
+        aria-current="page"
+      >
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>HOME</span>
+      </a>
+
+      <a href="menu.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">♜</span>
+        <span>MENU</span>
+      </a>
+
+      <a href="cart.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">▢</span>
+        <span class="nav-label">
+          CART
+          <span class="cart-count" id="cartCount">0</span>
+        </span>
+      </a>
+
+      <a href="orders.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">◉</span>
+        <span>ORDERS</span>
+      </a>
+    </nav>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script type="module" src="../js/customer-dashboard.js"></script>
+  </body>
+</html>

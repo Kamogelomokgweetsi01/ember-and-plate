@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your Order | Ember & Plate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/orders.css" />
+
+    <script src="../js/orders.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="order-header">
+      <div class="order-header-content">
+        <a href="index.html" class="brand">
+          <span class="brand-kicker">EMBER & PLATE</span>
+          <span class="brand-name">Restaurant</span>
+        </a>
+
+        <div class="table-indicator">
+          TABLE <strong id="tableNumber">12</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="order-page">
+      <!-- PAGE INTRO -->
+      <section class="order-intro">
+        <div>
+          <span class="section-kicker" id="pageKicker">
+            YOUR DINING EXPERIENCE
+          </span>
+
+          <h1 id="pageTitle">Review your order</h1>
+
+          <p id="pageDescription">
+            Check your selection before sending it to our kitchen.
+          </p>
+        </div>
+
+        <div class="order-number" id="orderNumberBlock" hidden>
+          <span>ORDER NUMBER</span>
+          <strong id="orderNumber">—</strong>
+        </div>
+      </section>
+
+      <!-- CHECKOUT REVIEW -->
+      <section
+        class="order-section order-review-section"
+        id="orderReviewSection"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">BEFORE WE BEGIN</span>
+            <h2>Your selection</h2>
+          </div>
+
+          <span class="dish-total-count" id="reviewItemCount"> 0 items </span>
+        </div>
+
+        <div class="dish-list" id="reviewDishList"></div>
+
+        <div class="order-total review-subtotal">
+          <span>SUBTOTAL</span>
+          <strong id="reviewSubtotal">R 0.00</strong>
+        </div>
+
+        <div class="review-fees">
+          <div>
+            <span>Service fee (10%)</span>
+            <strong id="reviewServiceFee">R 0.00</strong>
+          </div>
+
+          <div class="review-grand-total">
+            <span>TOTAL TO PAY</span>
+            <strong id="reviewTotal">R 0.00</strong>
+          </div>
+        </div>
+
+        <div class="review-note">
+          <strong>One last check</strong>
+          <p>
+            Please check your dishes and quantities. Selecting “Place order”
+            confirms this order for the kitchen.
+          </p>
+        </div>
+
+        <p class="order-error" id="reviewError" role="alert" hidden></p>
+
+        <div class="review-actions">
+          <a class="secondary-action" href="cart.html"> Back to cart </a>
+
+          <button type="button" class="primary-action" id="placeOrderButton">
+            Place order
+          </button>
+        </div>
+      </section>
+
+      <!-- ORDER TRACKING -->
+      <div id="orderTrackingSection" hidden>
+        <!-- CURRENT STATUS -->
+        <section class="current-order-card">
+          <div class="current-status-header">
+            <div>
+              <span class="status-kicker"> LIVE ORDER STATUS </span>
+
+              <h2 id="currentStatus">Order received</h2>
+            </div>
+
+            <div class="fire-status" aria-hidden="true">EP</div>
+          </div>
+
+          <p id="currentMessage">Your order has been received.</p>
+
+          <div class="progress-wrapper">
+            <div class="progress-labels">
+              <span>PREPARATION PROGRESS</span>
+              <strong id="progressPercent">0%</strong>
+            </div>
+
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Order preparation progress"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              id="progressBar"
+            >
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="time-estimate">
+            <div>
+              <span>ESTIMATED TIME LEFT</span>
+              <strong id="timeRemaining">25 min</strong>
+            </div>
+
+            <div class="estimated-completion">
+              <span>ESTIMATED READY</span>
+              <strong id="estimatedReady">—</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- ORDER DETAILS -->
+        <section class="order-meta-grid">
+          <div class="meta-card">
+            <span>ORDER NUMBER</span>
+            <strong id="metaOrderNumber">—</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>TABLE</span>
+            <strong id="metaTable">12</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>ITEMS</span>
+            <strong id="dishCount">0</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>ORDER TOTAL</span>
+            <strong id="metaTotal">R 0.00</strong>
+          </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="order-section">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">FROM OUR KITCHEN</span>
+              <h2>Order progress</h2>
+            </div>
+          </div>
+
+          <div class="timeline" id="orderTimeline"></div>
+        </section>
+
+        <!-- ORDERED DISHES -->
+        <section class="order-section">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">MADE FOR YOU</span>
+              <h2>Your dishes</h2>
+            </div>
+
+            <span class="dish-total-count" id="dishTotalCount"> 0 items </span>
+          </div>
+
+          <div class="dish-list" id="dishList"></div>
+
+          <div class="order-total">
+            <span>ORDER TOTAL (INCLUDING SERVICE FEE)</span>
+            <strong id="orderTotal">R 0.00</strong>
+          </div>
+        </section>
+
+        <!-- CHEF -->
+        <section class="chef-card">
+          <div class="chef-avatar">T</div>
+
+          <div class="chef-information">
+            <span>YOUR KITCHEN TEAM</span>
+            <h3 id="chefName">Kitchen team</h3>
+            <p id="chefDisplayName">Preparing your order with care.</p>
+          </div>
+
+          <span class="chef-status" id="chefStatus"> ON DUTY </span>
+        </section>
+
+        <!-- SERVER REQUEST -->
+        <section class="server-section">
+          <div>
+            <span class="section-kicker">WE ARE HERE TO HELP</span>
+            <h2>Need anything else?</h2>
+            <p>Request assistance from your server.</p>
+          </div>
+
+          <button type="button" class="server-button" id="summonServer">
+            Request a server
+          </button>
+        </section>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <section class="empty-order-state" id="emptyOrderState" hidden>
+        <span class="section-kicker">EMBER & PLATE</span>
+        <h2 id="emptyOrderTitle">Nothing here just yet</h2>
+
+        <p id="emptyOrderMessage">
+          Add dishes to your cart to begin your order.
+        </p>
+
+        <a href="menu.html" class="primary-action"> Explore the menu </a>
+      </section>
+    </main>
+
+    <!-- SERVER REQUEST MODAL -->
+    <div
+      class="modal-overlay"
+      id="serverModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="serverModalTitle"
+      aria-hidden="true"
+    >
+      <div class="server-modal">
+        <button
+          type="button"
+          class="close-modal"
+          id="closeModal"
+          aria-label="Close dialog"
+        >
+          &times;
+        </button>
+
+        <span class="section-kicker">PERSONAL SERVICE</span>
+
+        <h2 id="serverModalTitle">How can we help?</h2>
+
+        <p>Select what you need and we'll record your request.</p>
+
+        <div class="server-options">
+          <button type="button" data-request="Assistance">
+            I need assistance
+          </button>
+
+          <button type="button" data-request="Water">
+            I'd like some water
+          </button>
+
+          <button type="button" data-request="Cutlery">
+            I need cutlery or serviettes
+          </button>
+
+          <button type="button" data-request="Bill">I'd like the bill</button>
+        </div>
+
+        <p id="serverRequestMessage" role="status" hidden></p>
+
+        <button type="button" class="cancel-button" id="cancelModal">
+          CLOSE
+        </button>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-navigation" aria-label="Main navigation">
+      <a href="customer-dashboard.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">⌂</span>
+        <span>HOME</span>
+      </a>
+
+      <a href="menu.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">♜</span>
+        <span>MENU</span>
+      </a>
+
+      <a href="cart.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">▢</span>
+        <span class="nav-label">
+          CART
+          <span class="cart-count" id="bottomCartCount">0</span>
+        </span>
+      </a>
+
+      <a href="orders.html" class="nav-item active" aria-current="page">
+        <span class="nav-icon" aria-hidden="true">◉</span>
+        <span>ORDERS</span>
+      </a>
+    </nav>
+  </body>
+</html>
